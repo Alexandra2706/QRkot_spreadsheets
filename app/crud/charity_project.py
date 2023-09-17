@@ -34,8 +34,7 @@ class CRUDCharityProject(CRUDBase):
         projects_list = projects_list.scalars().all()
         projects_list = sorted(
             projects_list,
-            key=lambda project: project.close_date - project.create_date
-            )
+            key=lambda project: project.close_date - project.create_date)
         return projects_list
 
 
